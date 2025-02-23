@@ -26,7 +26,7 @@ func generate_terrain():
 
 	for x in range(map_width):
 		for y in range(map_height):
-			var value = noise.get_noise_2d(x, y)
+			var value = noise.get_noise_2d(Vector2i(x, y))
 			if value > 0.5:
 				tilemap.set_cell(x, y, 1) # Set to a specific tile index
 			else:
