@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://u0sc1if3e2lb"]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_3wxs6"]
+[ext_resource type="Texture2D" uid="uid://b2t2rvxh661og" path="res://assets/player/Idle-Sheet.png" id="2_g4l60"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvtva"]
+size = Vector2(20, 32)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_3wxs6")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_g4l60")
+hframes = 4
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, 17)
+shape = SubResource("RectangleShape2D_dvtva")
