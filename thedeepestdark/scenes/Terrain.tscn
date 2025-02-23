@@ -3,6 +3,6 @@
 [ext_resource type="TileSet" uid="uid://bt8kmj3fw0od0" path="res://assets/Tilesets/terrain_tileset.tres" id="1_qtskf"]
 [ext_resource type="Script" path="res://scripts/TerrainGenerator.gd" id="1_ufq44"]
 
-[node name="Terrain" type="TileMapLayer"]
+[node name="TileMapLayer" type="TileMapLayer"]
 tile_set = ExtResource("1_qtskf")
 script = ExtResource("1_ufq44")

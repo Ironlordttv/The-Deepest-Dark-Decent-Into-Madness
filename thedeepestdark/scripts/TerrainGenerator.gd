@@ -7,7 +7,7 @@ extends Node2D
 @export var map_height: int = 1000
 
 # TileMap reference
-var tilemap: TileMapLayer
+@onready var tilemap = $TileMapLayer
 
 # FastNoiseLite instance
 var noise = FastNoiseLite.new()
@@ -22,12 +22,10 @@ func _ready():
 	generate_terrain()
 
 func generate_terrain():
-	tilemap = $TileMapLayer
-
 	for x in range(map_width):
 		for y in range(map_height):
-			var value = noise.get_noise_2d(Vector2i(x, y))
+			var value = noise.get_noise_2d(x, y)
 			if value > 0.5:
-				tilemap.set_cell(x, y, 1) # Set to a specific tile index
+				tilemap.set_cell(Vector2i(x, y), 1) # Set to a specific tile index
 			else:
-				tilemap.set_cell(x, y, 0) # Set to another tile index
+				tilemap.set_cell(Vector2i(x, y), 0) # Set to another tile index
