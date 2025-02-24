@@ -1,5 +1,3 @@
-extends Node2D
-
 # Parameters for the procedural generation
 @export var seed: int = 0
 @export var noise_scale: float = 0.1
@@ -22,10 +20,14 @@ func _ready():
 	generate_terrain()
 
 func generate_terrain():
+	print("Generating terrain...")
 	for x in range(map_width):
 		for y in range(map_height):
 			var value = noise.get_noise_2d(x, y)
 			if value > 0.5:
 				tilemap.set_cell(Vector2i(x, y), 1) # Set to a specific tile index
+				print("Setting tile at (", x, ",", y, ") to index 1")
 			else:
 				tilemap.set_cell(Vector2i(x, y), 0) # Set to another tile index
+				print("Setting tile at (", x, ",", y, ") to index 0")
+	print("Terrain generation complete.")

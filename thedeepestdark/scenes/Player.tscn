@@ -16,3 +16,5 @@ hframes = 4
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_dvtva")
+
+[node name="Camera2D" type="Camera2D" parent="."]

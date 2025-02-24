@@ -21,3 +21,5 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="SaveSystem" type="Node" parent="."]
+
+[node name="TileMapLayer" parent="." instance=ExtResource("3_rj2t1")]
