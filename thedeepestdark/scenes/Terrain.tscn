@@ -5,10 +5,6 @@
 
 [node name="Terrain" type="Node2D"]
 script = ExtResource("1_ufq44")
-seed = null
-noise_scale = null
-map_width = null
-map_height = null
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = ExtResource("1_qtskf")
