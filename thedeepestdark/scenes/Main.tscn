@@ -1,25 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5orkrum2bbbl"]
+[gd_scene format=3 uid="uid://cv4d7p74ubr36"]
 
-[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_5bu58"]
-[ext_resource type="PackedScene" uid="uid://u0sc1if3e2lb" path="res://scenes/Player.tscn" id="2_j2bgl"]
-[ext_resource type="PackedScene" uid="uid://caoe5etdmb2mb" path="res://scenes/Terrain.tscn" id="3_rj2t1"]
+[node name="Main" type="Node2D"]
 
-[node name="Main" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_5bu58")
-player_scene = ExtResource("2_j2bgl")
-terrain_scene = ExtResource("3_rj2t1")
-
-[node name="GameWorld" type="Node2D" parent="."]
-
-[node name="GameUI" type="PanelContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="SaveSystem" type="Node" parent="."]
-
-[node name="Terrain" parent="." instance=ExtResource("3_rj2t1")]
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
